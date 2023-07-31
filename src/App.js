@@ -11,6 +11,7 @@ import Home from './components/Main components/Home';
 import Shop from './components/Main components/Shop';
 import Contactus from './components/Main components/Contactus'
 import ShoppingCart from './components/Checkout/Shoppingcart'
+import Sidebar from './components/Main components/Sidebar';
 
 
 
@@ -19,6 +20,7 @@ function App() {
     <Router>
     <div className="App">
       <Navbar/>
+      <Sidebar/>
       <Routes>
         <Route path='/home' element={<Home/>}></Route>
       </Routes>
