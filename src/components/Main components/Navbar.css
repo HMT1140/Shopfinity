@@ -1,4 +1,14 @@
-
+.navbar{
+    
+}
+.searchinput{
+    box-shadow:2px 3px 5px #553c9a, -2px -3px 5px #553c9a;
+    width: 350px;
+}
+.searchdiv{
+    margin-right: auto;
+    margin-left: auto;
+}
 	 
 .btn{
    background-color:  rgb(126, 34, 206);
@@ -16,5 +26,9 @@
 }
 .headingcolor:hover{
     color: rgb(126, 34, 206);
+    
+}
+.shoppingcartdiv{
+   
     
 }
