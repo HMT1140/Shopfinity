@@ -1,11 +1,14 @@
 import React from 'react'
-import Eclipse from '../images/Eclipse-1s-200px.gif'
-const Spinner = () => {
+import Spinner from 'react-bootstrap/Spinner';
+import './Spinner.css'
+const SpinnerFeature = () => {
   return (
-    <div >
-        <img src={Eclipse} alt="spinner" />
+    <div className="container text-center spinnerdiv">
+      <Spinner animation="border" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </Spinner>
     </div>
   )
 }
 
-export default Spinner
+export default SpinnerFeature

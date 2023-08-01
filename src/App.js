@@ -12,6 +12,7 @@ import Shop from './components/Main components/Shop';
 import Contactus from './components/Main components/Contactus'
 import ShoppingCart from './components/Checkout/Shoppingcart'
 import Sidebar from './components/Main components/Sidebar';
+import Productdetails from './components/Products/Productdetails';
 
 
 
@@ -32,6 +33,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/shoppingcart' element={<ShoppingCart/>}></Route>
+      </Routes>
+      <Routes>
+        <Route path='/productdetails' element={<Productdetails/>}></Route>
       </Routes>
     </div>
     </Router>

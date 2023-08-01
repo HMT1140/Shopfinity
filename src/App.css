@@ -6,15 +6,38 @@
   flex: 20%;
   list-style-type: none;
   border-right: 1px solid  rgb(126, 34, 206);
+  padding-top: 60px;
+  padding-left: 20px;
+  
+  
   
 }
 .sidebarlist{
   text-decoration: none;
   color: white;
   
+  
 }
 body{
   background-color: #23272F;
   color:white;
+  
  
+}
+.shoplistitem{
+  margin-left: 300px;
+  width: 300px;
+  padding-top: 100px;
+  
+}
+.home{
+  text-align: center;
+  padding-top: 50px;
+}
+.productdetails{
+  margin-left: 400px;
+  padding-top: 50px;
+}
+.spinnerdiv{
+  margin-top:100px;
 }

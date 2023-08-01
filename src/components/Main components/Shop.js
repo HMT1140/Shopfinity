@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react'
 
 import Productlist from '../Products/Productlist'
-import Spinner from '../extra features/Spinner'
+import SpinnerFeature from '../extra features/Spinner'
+
 
 
 
@@ -28,8 +29,8 @@ const Shop = () => {
   
   return (
     <div className="row">
-      { loading === true? <Spinner/> : productdata.map((val)=>{
-        return <div className="col-md-4 my-5">
+      { loading === true? <SpinnerFeature/> : productdata.map((val)=>{
+        return <div className=" container shoplistitem col-md-8 my-2">
           <Productlist title={val.title} price ={val.price} description = {val.description} image={val.image} category = {val.category}/>
         </div>
       })}
