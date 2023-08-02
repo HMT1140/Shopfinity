@@ -1,0 +1,20 @@
+.productlist{
+    width: 200px;
+    border: 1px solid white;
+    height: 270px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: #fff;
+    color: black;
+}
+img{
+    padding-top: 5px;
+}
+.imagediv{
+    
+    display: flex;
+    justify-content: center;
+}
+.button_productlist{
+    margin: 0;
+}

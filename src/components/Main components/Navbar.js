@@ -7,7 +7,7 @@ const Navbar = () => {
   const location=  useLocation()
   return (
     <div>
-        <nav className="navbar fixed-top navbar-dark navbar-expand-lg bg-dark">
+        <nav className="navbar  navbar-dark navbar-expand-lg bg-dark">
   <div className="container-fluid">
     <Link className="navbar-brand " to="/home"><h3 className="headingcolor">Shopfinity</h3></Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@ const Navbar = () => {
       </form>
       <form className="d-flex mx-1" role="button">
        <div className="container ">
-       <a href="/login"><button className="btn  mx-2">Login/Signup</button></a>
+       <Link to="/select"><button className="btn  mx-2">Login/Signup</button></Link>
 
         
       

@@ -2,36 +2,28 @@ import React, {useEffect, useState} from 'react'
 
 import Productlist from '../Products/Productlist'
 import SpinnerFeature from '../extra features/Spinner'
+import { fetchdata } from '../features/ProductSlice'
+import { useDispatch } from 'react-redux'
+import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector'
+
 
 
 
 
 const Shop = () => {
-  const [productdata, setproductdata] = useState([])
-  const [loading, setloading] = useState(false)
-  useEffect(() => {
-    
-  
-    return async() => {
-      const url = 'https://fakestoreapi.com/products';
-      setloading(true)
-      
-    const data = await fetch(url)
-    const parseddata= await data.json();
-    setproductdata(parseddata)
-    setloading(false)
-    
+ const product= useSelector((state)=> state.product.content)
 
-    
-   
-    }
+ const product_loading = useSelector((state) => state.product.loading)
+  const dispatch = useDispatch()
+  useEffect(() => {
+   dispatch(fetchdata())
   }, [])
   
   return (
-    <div className="row">
-      { loading === true? <SpinnerFeature/> : productdata.map((val)=>{
-        return <div className=" container shoplistitem col-md-8 my-2">
-          <Productlist title={val.title} price ={val.price} description = {val.description} image={val.image} category = {val.category}/>
+    <div className="row  justify-content-left">
+      { product_loading === true? <SpinnerFeature/> : product.map((val)=>{
+        return <div className="  shoplistitem col-sm-4   ">
+          <Productlist title={val.title} image = {val.image} price = {val.price}/>
         </div>
       })}
     </div>

@@ -1,23 +1,6 @@
-.sidebar{
-  background-color: #23272F;
-  width: 200px;
-  height: 100vh;
-  position: fixed;
-  flex: 20%;
-  list-style-type: none;
-  border-right: 1px solid  rgb(126, 34, 206);
-  padding-top: 60px;
-  padding-left: 20px;
+
   
-  
-  
-}
-.sidebarlist{
-  text-decoration: none;
-  color: white;
-  
-  
-}
+
 body{
   background-color: #23272F;
   color:white;
@@ -25,8 +8,8 @@ body{
  
 }
 .shoplistitem{
-  margin-left: 300px;
-  width: 300px;
+
+  
   padding-top: 100px;
   
 }
@@ -40,4 +23,7 @@ body{
 }
 .spinnerdiv{
   margin-top:100px;
+}
+.productdetails{
+  padding-top: 100px;
 }

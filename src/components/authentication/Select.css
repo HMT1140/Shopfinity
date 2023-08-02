@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap');
+.maindiv{
+    display: flex;
+   align-items: center;
+   
+    
+    width: 100vw;
+    height: 80vh;
+    
+
+}
+.button{
+    width: 300px;
+    margin: 6px;
+    padding: 5px 20px;
+    border: 1px solid  rgb(126, 34, 206) ;
+    background-color:  rgb(126, 34, 206);
+    color: white;
+    font-weight: bold;
+    font-family:Dosis;
+    border-radius: 13px;
+}
+.button:hover{
+    background-color:#553c9a ;
+}

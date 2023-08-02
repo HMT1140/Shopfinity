@@ -1,0 +1,22 @@
+.loginpagemaindiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 86vh;
+    
+}
+.loginpagediv{
+    display: flex;
+    flex-direction: column;
+    width: 17em;
+    height: 13em;
+    border: 1px solid rgb(126, 34, 206);
+    border-radius: 14px;
+}
+.heading_login{
+    color: rgb(126, 34, 206);
+    font-family: Dosis;
+    padding-top: 7px;
+    font-weight: bold;
+}

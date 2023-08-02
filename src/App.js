@@ -11,8 +11,11 @@ import Home from './components/Main components/Home';
 import Shop from './components/Main components/Shop';
 import Contactus from './components/Main components/Contactus'
 import ShoppingCart from './components/Checkout/Shoppingcart'
-import Sidebar from './components/Main components/Sidebar';
+
 import Productdetails from './components/Products/Productdetails';
+import Select from './components/authentication/Select'
+import Login from './components/authentication/Login'
+import Signup from './components/authentication/Signup';
 
 
 
@@ -21,7 +24,7 @@ function App() {
     <Router>
     <div className="App">
       <Navbar/>
-      <Sidebar/>
+      
       <Routes>
         <Route path='/home' element={<Home/>}></Route>
       </Routes>
@@ -36,6 +39,15 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/productdetails' element={<Productdetails/>}></Route>
+      </Routes>
+      <Routes>
+        <Route path='/select' element={<Select/>}></Route>
+      </Routes>
+      <Routes>
+        <Route path='/login' element={<Login/>}></Route>
+      </Routes>
+      <Routes>
+        <Route path='/signup' element={<Signup/>}></Route>
       </Routes>
     </div>
     </Router>

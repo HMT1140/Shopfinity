@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Productdetails = () => {
+const Productdetails = (props) => {
+  const {title, description , price, image}=props
   return (
     <div className='container productdetails pd-top-100'>
      <div className="productdetails_firstdiv container">
      <img src="" alt="Product image" />
-      <h3 className='productdetails_title'>Title</h3>
+      <h4 className='productdetails_title'>{title}</h4>
       <p className='productdetails_description'>Description</p>
      </div>
      <div className="productdetails_seconddiv container">
