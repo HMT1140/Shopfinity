@@ -7,18 +7,31 @@ import {
   
 } from "react-router-dom";
 
+
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import  {useSelector } from 'react-redux/es/hooks/useSelector';
+import  {useSelector ,} from 'react-redux/es/hooks/useSelector';
+import { useDispatch } from 'react-redux';
+import { updateid } from '../features/ProductdetailsSlice';
 
 
 const Productlist = (props) => {
-  const {title , price ,description , image , category}= props
+  const {product }= props
+ 
   const HandleOnClick= ()=>{
     
   }
-  const product_title =useSelector((state)=>state.product.data)
+
+  const dispatch = useDispatch();
+  const UPDATEID =()=>{
+    dispatch(updateid())
+  }
+  UPDATEID(product.id);
+  
+  
+  
+ 
 
 
  
@@ -28,13 +41,16 @@ const Productlist = (props) => {
   return (
     
 
-    <div className=" productlist container ">
+    <div key={product.id} className=" productlist container ">
     <div className="imagediv">
-    <img className="justify-content-center "src={image} alt="product image" width={150} height={120}/>
+    <img className="justify-content-center "src={product.image} alt="product image" width={150} height={120}/>
     </div>
-    <h6 className='my-1'>{`${title.slice(0, 30)}...`}</h6>
-    <p>${price}</p>
-    <Link to='/productdetails'><Button className='button_productlist'>Details</Button></Link>
+    <h6 className='my-1'>{`${product.title.slice(0, 30)}...`}</h6>
+    <p>${product.price}</p>
+
+    <Link to={`/productdetails/${product.id}`}><Button className='button_productlist'>Details</Button></Link>
+
+    
     
 
 

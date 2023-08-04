@@ -22,9 +22,10 @@ const Shop = () => {
   return (
     <div className="row  justify-content-left">
       { product_loading === true? <SpinnerFeature/> : product.map((val)=>{
-        return <div className="  shoplistitem col-sm-4   ">
-          <Productlist title={val.title} image = {val.image} price = {val.price}/>
+        return <div className=" key={val.id} shoplistitem col-sm-4   ">
+          <Productlist product={val} title={val.title} image = {val.image} price = {val.price} id={val.id}/>
         </div>
+       
       })}
     </div>
   )

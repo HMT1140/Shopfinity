@@ -1,0 +1,35 @@
+.productdetails_firstdiv{
+    display: flex;
+    padding-top: 50px;
+}
+.imageandtitlediv{
+    margin-left: 15px;
+    
+}
+.descandbutton{
+    margin-left:auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.spinnerproductdetails{
+    text-align: center;
+}
+.counterdiv{
+    display: flex;
+    background-color: white;
+   
+    color: black;
+    width: 80px;
+    border: 1px solid  rgb(126, 34, 206);
+   
+}
+.bttn{
+    border: 0;
+    background-color: white;
+
+}
