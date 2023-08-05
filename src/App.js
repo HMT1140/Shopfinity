@@ -16,6 +16,7 @@ import Productdetails from './components/Products/Productdetails';
 import Select from './components/authentication/Select'
 import Login from './components/authentication/Login'
 import Signup from './components/authentication/Signup';
+import Checkoutprocess from './components/Checkout/Checkoutprocess';
 
 
 
@@ -48,6 +49,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/signup' element={<Signup/>}></Route>
+      </Routes>
+      <Routes>
+        <Route path='/checkoutprocess' element={<Checkoutprocess/>}></Route>
       </Routes>
     </div>
     </Router>

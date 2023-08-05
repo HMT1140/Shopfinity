@@ -1,0 +1,30 @@
+.Checkoutprocessmaindiv{
+    width: 100vw;
+    height: 100vh;
+    
+   
+}
+.checkoutprocessdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid  rgb(126, 34, 206) ;
+    width: 29em;
+    height: 29em;
+    border-radius: 20px ;
+
+}
+.inputcheckout{
+    width: 23em;
+    height: 2em;
+    height: 2.5em;
+    margin-top: 20px;
+    padding: 5px 15px;
+    border: 1px solid rgb(126, 34, 206);
+    border-radius: 13px;
+}

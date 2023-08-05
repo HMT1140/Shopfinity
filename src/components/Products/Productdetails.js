@@ -5,6 +5,9 @@ import { getdata } from '../features/ProductdetailsSlice';
 import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import './Productdetails.css'
+import { additemtocart , updatequantity } from '../features/ShoppingCartSlice';
+import { dataget } from '../features/ShoppingCartSlice';
+
 
 const Productdetails = () => {
   const dispatch = useDispatch();
@@ -26,7 +29,12 @@ const Productdetails = () => {
    setcounter (counter -1)
  }
 
- 
+ const Handleonclick= ()=>{
+  
+  dispatch(additemtocart({ ...data[0], quantity: counter }));
+
+
+ }
 
 
   return (
@@ -42,14 +50,15 @@ const Productdetails = () => {
         </div>
          <div className="descandbutton">
          <p className='productdetails_description'>{val.description}</p>
+         <h6>Price: ${val.price}</h6>
          <div className="counterdiv">
           <button className='bttn' onClick={onnegclick}>-</button>
-          <p>{counter}</p>
+          <p>{counter <= 0? 0: counter}</p>
           <button className='bttn' onClick={onplusclick}>+</button>
          </div>
         
        
-       <button className="btn" >Add to Cart</button>
+       <button className="btn" onClick={Handleonclick}>Add to Cart</button>
         
          </div>
         
