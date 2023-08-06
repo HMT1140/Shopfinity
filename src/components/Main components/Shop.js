@@ -5,6 +5,7 @@ import SpinnerFeature from '../extra features/Spinner'
 import { fetchdata } from '../features/ProductSlice'
 import { useDispatch } from 'react-redux'
 import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector'
+import { Link } from 'react-router-dom'
 
 
 
@@ -20,6 +21,10 @@ const Shop = () => {
   }, [])
   
   return (
+    <>
+    <div className="newpage container text-center">
+         <Link to='/newproductpage'><button className="btn">Add New Product</button></Link>
+    </div>
     <div className="row  justify-content-left">
       { product_loading === true? <SpinnerFeature/> : product.map((val)=>{
         return <div className=" key={val.id} shoplistitem col-sm-4   ">
@@ -28,6 +33,7 @@ const Shop = () => {
        
       })}
     </div>
+    </>
   )
 }
 

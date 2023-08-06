@@ -1,0 +1,39 @@
+.newproductpagemaindiv{
+    display: flex;
+    width: 100vw;
+    height: 86vh;
+    justify-content: center;
+    align-items: center;
+}
+.newproductpagediv{
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    height: 25em;
+    border: 1px solid   rgb(126, 34, 206);
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+.inputsnewporductpage{
+    width: 24rem;
+    height: 2.3rem;
+    border: 1px solid rgb(126, 34, 206);
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+.title{
+    color: rgb(126, 34, 206);
+    font-family: Dosis;
+    font-weight: bold;
+    font-size: large;
+}
+.imagediv{
+
+
+   
+}

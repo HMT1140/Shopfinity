@@ -1,4 +1,9 @@
 .Checkoutprocessmaindiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
     width: 100vw;
     height: 100vh;
     
@@ -6,13 +11,9 @@
 }
 .checkoutprocessdiv{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+   align-items: center;
+ 
     border: 1px solid  rgb(126, 34, 206) ;
     width: 29em;
     height: 29em;

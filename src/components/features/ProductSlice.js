@@ -1,6 +1,8 @@
 import React ,{useEffect, useState} from 'react'
 import { createSlice , createAsyncThunk} from "@reduxjs/toolkit";
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 const initialState ={
@@ -25,6 +27,19 @@ export const fetchdata = createAsyncThunk('product/fetchdata', ()=>{
 const ProductSlice = createSlice({
     name:"product",
    initialState,
+   reducers:{
+   
+     addnewproduct: {
+        reducer(state, action ){
+            state.content.push(action.payload)
+
+        },
+        prepare(newproduct){
+            return {payload:{...newproduct, id: uuidv4()}}
+        }
+     }
+
+   },
     extraReducers:builder =>{
         builder.addCase(fetchdata.pending, state=>{
             state.loading = true
@@ -42,5 +57,6 @@ const ProductSlice = createSlice({
     }
 })
 export default ProductSlice.reducer;
+export const {addnewproduct} = ProductSlice.actions
 
 

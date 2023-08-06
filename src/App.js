@@ -17,6 +17,7 @@ import Select from './components/authentication/Select'
 import Login from './components/authentication/Login'
 import Signup from './components/authentication/Signup';
 import Checkoutprocess from './components/Checkout/Checkoutprocess';
+import Newproductpage from './components/Products/Newproductpage';
 
 
 
@@ -52,6 +53,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/checkoutprocess' element={<Checkoutprocess/>}></Route>
+      </Routes>
+      <Routes>
+        <Route path='/newproductpage' element={<Newproductpage/>}></Route>
       </Routes>
     </div>
     </Router>

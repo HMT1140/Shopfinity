@@ -36,7 +36,15 @@ const ShoppingcartSlice = createSlice({
        },
        updatetotalprice(state, action){
         return void(state.totalprice = action.payload)
-       }
+       },
+       removeitemfromcart(state, action){
+       state.content =state.content.filter((product)=>product.id!== action.payload)
+       
+      
+        
+            
+        
+}
 
 
     },
@@ -59,4 +67,4 @@ const ShoppingcartSlice = createSlice({
     }
 })
 export default ShoppingcartSlice.reducer;
-export const {additemtocart,updatequantity,updatetotalprice} = ShoppingcartSlice.actions
+export const {additemtocart,updatequantity,updatetotalprice,removeitemfromcart} = ShoppingcartSlice.actions

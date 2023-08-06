@@ -1,12 +1,15 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { updatetotalprice } from '../features/ShoppingCartSlice'
+import { updatetotalprice , removeitemfromcart } from '../features/ShoppingCartSlice'
 
 
 
 const Shoppingcartitem = () => {
     const product= useSelector((state)=> state.shoppingcart.content)
-  
+    const dispatch = useDispatch();
+  const Handleonremoveclick =(id)=>{
+    dispatch(removeitemfromcart(id))
+  }
    
 
   return (
@@ -21,6 +24,7 @@ const Shoppingcartitem = () => {
     <h5 class="card-title">{val.title}</h5>
     <p>${val.price} (quantity: {val.quantity})</p>
     <h6>Total Price of the product: ${val.price * val.quantity}</h6>
+    <button className="btn" onClick={()=>Handleonremoveclick(val.id)}>Remove Item</button>
     
 
    
